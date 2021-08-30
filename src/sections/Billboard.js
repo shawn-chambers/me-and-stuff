@@ -10,9 +10,9 @@ const Billboard = () => {
     setHover(prev => !prev);
   }
 
-  const moveLeft = useTransform(scrollYProgress, [0, .45], [0, -2000]);
-  const moveRight = useTransform(scrollYProgress, [0, .45], [0, 2000]);
-  const hide = useTransform(scrollYProgress, [0, .35], [1, 0]);
+  const moveLeft = useTransform(scrollYProgress, [0, .8], [0, -2000]);
+  const moveRight = useTransform(scrollYProgress, [0, .8], [0, 2000]);
+  const hide = useTransform(scrollYProgress, [0, .55], [1, 0]);
 
   return (
     <section className="billboard">
