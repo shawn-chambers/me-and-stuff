@@ -1,0 +1,30 @@
+.billboard {
+  overflow: hidden;
+  &-header {
+    &-main {
+      padding: 50px 100px 0 100px;
+    }
+    &-sub {
+      font-size: 100px;
+    }
+  }
+  &-squiggle {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+
+    & > svg {
+      width: 95vw;
+    }
+  }
+}
+
+.first {
+  text-align: left;
+}
+.second {
+  text-align: right;
+}
+

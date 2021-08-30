@@ -1,9 +1,9 @@
-import Header from "./components/sections/Header";
+import Billboard from "./sections/Billboard";
 
 function App() {
   return (
     <>
-      <Header />
+      <Billboard />
     </>
   );
 }
