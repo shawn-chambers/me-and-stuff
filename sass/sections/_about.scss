@@ -1,4 +1,6 @@
 .about {
+  display: flex;
+  gap: 120px;
   &-text {
     margin-left: 10vw;
     font-family: 'Montserrat', sans-serif;
@@ -6,4 +8,8 @@
     width: 40vw;
     padding: 10px;
   }
+}
+
+.face {
+
 }

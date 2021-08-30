@@ -1,5 +1,6 @@
 import { motion, useViewportScroll } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import FaceSVG from '../components/FaceSVG';
 
 const About = () => {
 
@@ -20,6 +21,7 @@ const About = () => {
       y: 0
     }
   }
+  
 
   return (
     <section className="about">
@@ -35,6 +37,9 @@ const About = () => {
           Et mauris lacus et mi id metus. Sagittis tortor eget sit luctus cursus et iaculis amet fames. Id tempor adipiscing at nunc et. Gravida sit ultricies viverra pellentesque amet convallis platea. At nunc commodo rhoncus, habitant tortor, imperdiet pellentesque. Ut blandit nisl leo, volutpat elementum.
         </motion.p>
       </motion.div>
+      <div className="face">
+        <FaceSVG seen={inView}/>
+      </div>
     </section>
   )
 }
