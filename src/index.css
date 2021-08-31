@@ -42,6 +42,9 @@
     width: 40vw;
     padding: 10px; }
 
+.experience {
+  font-size: 150px; }
+
 *,
 *::before,
 *::after {
