@@ -1,5 +1,6 @@
 .billboard {
   margin-bottom: 150px;
+  overflow: hidden;
   &-header {
     &-main {
       padding: 50px 100px 0 100px;
@@ -28,3 +29,10 @@
   text-align: right;
 }
 
+.copy {
+  -webkit-text-stroke-color: #f8bd95;
+  position: relative;
+  top: -120px;
+  z-index: -2;
+  float: left;
+}

@@ -1,7 +1,11 @@
 .about {
   display: flex;
   gap: 120px;
+  overflow: hidden;
+  width: 90vw;
+  margin: auto;
   &-text {
+    opacity: 0;
     margin-left: 10vw;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;

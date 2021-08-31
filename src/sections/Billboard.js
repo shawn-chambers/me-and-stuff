@@ -10,8 +10,8 @@ const Billboard = () => {
     setHover(prev => !prev);
   }
 
-  const moveLeft = useTransform(scrollYProgress, [0, .8], [0, -2000]);
-  const moveRight = useTransform(scrollYProgress, [0, .8], [0, 2000]);
+  const moveLeft = useTransform(scrollYProgress, [0, .8], [0, -1500]);
+  const moveRight = useTransform(scrollYProgress, [0, .8], [0, 1500]);
   const hide = useTransform(scrollYProgress, [0, .55], [1, 0]);
 
   return (
@@ -36,7 +36,8 @@ const Billboard = () => {
         <div className="scroll">
           <div className="scroll-marquee">
             <p
-              className={hover ? 'glitch' : ''}
+              className="glitch"
+              // className={hover ? 'glitch' : ''}
               data-text="FULLSTACK ENGINEER"
               onMouseEnter={handleMouse}
               onMouseLeave={handleMouse}
@@ -44,7 +45,8 @@ const Billboard = () => {
               FULLSTACK ENGINEER
             </p>
             <p
-              className={hover ? 'glitch' : ''}
+              className="glitch"
+              // className={hover ? 'glitch' : ''}
               data-text="FULLSTACK ENGINEER"
               onMouseEnter={handleMouse}
               onMouseLeave={handleMouse}
@@ -52,7 +54,8 @@ const Billboard = () => {
               FULLSTACK ENGINEER
             </p>
             <p
-              className={hover ? 'glitch' : ''}
+              className="glitch"
+              // className={hover ? 'glitch' : ''}
               data-text="FULLSTACK ENGINEER"
               onMouseEnter={handleMouse}
               onMouseLeave={handleMouse}
@@ -60,7 +63,8 @@ const Billboard = () => {
               FULLSTACK ENGINEER
             </p>
             <p
-              className={hover ? 'glitch' : ''}
+              className="glitch"
+              // className={hover ? 'glitch' : ''}
               data-text="FULLSTACK ENGINEER"
               onMouseEnter={handleMouse}
               onMouseLeave={handleMouse}
@@ -68,7 +72,8 @@ const Billboard = () => {
               FULLSTACK ENGINEER
             </p>
             <p
-              className={hover ? 'glitch' : ''}
+              className="glitch"
+              // className={hover ? 'glitch' : ''}
               data-text="FULLSTACK ENGINEER"
               onMouseEnter={handleMouse}
               onMouseLeave={handleMouse}
@@ -76,7 +81,8 @@ const Billboard = () => {
               FULLSTACK ENGINEER
             </p>
             <p
-              className={hover ? 'glitch' : ''}
+              className="glitch"
+              // className={hover ? 'glitch' : ''}
               data-text="FULLSTACK ENGINEER"
               onMouseEnter={handleMouse}
               onMouseLeave={handleMouse}

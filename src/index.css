@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&family=Roboto+Slab&family=Montserrat&display=swap");
 .billboard {
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+  overflow: hidden; }
   .billboard-header-main {
     padding: 50px 100px 0 100px; }
   .billboard-header-sub {
@@ -20,10 +21,21 @@
 .second {
   text-align: right; }
 
+.copy {
+  -webkit-text-stroke-color: #f8bd95;
+  position: relative;
+  top: -120px;
+  z-index: -2;
+  float: left; }
+
 .about {
   display: flex;
-  gap: 120px; }
+  gap: 120px;
+  overflow: hidden;
+  width: 90vw;
+  margin: auto; }
   .about-text {
+    opacity: 0;
     margin-left: 10vw;
     font-family: 'Montserrat', sans-serif;
     font-size: 30px;
@@ -36,6 +48,9 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit; }
+
+*::selection {
+  background: #fa7ad6; }
 
 body {
   background-color: #FFC5C5;
