@@ -53,7 +53,8 @@
   box-sizing: inherit; }
 
 *::selection {
-  background: #fa7ad6; }
+  background: #fa7ad6;
+  color: white; }
 
 body {
   background-color: #FFC5C5;
