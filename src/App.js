@@ -1,3 +1,4 @@
+import Abilities from "./sections/Abilities";
 import About from "./sections/About";
 import Billboard from "./sections/Billboard";
 import Experience from "./sections/Experience";
@@ -8,6 +9,7 @@ function App() {
       <Billboard />
       <About />
       <Experience />
+      <Abilities />
     </>
   );
 }

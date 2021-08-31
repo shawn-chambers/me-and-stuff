@@ -42,6 +42,11 @@
     width: 40vw;
     padding: 10px; }
 
+.abilities {
+  height: 100vh;
+  background-color: #060830;
+  color: #FFC5C5; }
+
 .experience {
   font-size: 150px; }
 
