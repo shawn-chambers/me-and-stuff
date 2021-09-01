@@ -6,6 +6,7 @@ import useRefScrollProgress from "../hooks/useRefScrollProgress";
 const Billboard = () => {
   const { scrollYProgress } = useViewportScroll();
 
+  // eslint-disable-next-line no-unused-vars
   const [hover, setHover] = useState(false);
   const handleMouse = () => {
     setHover(prev => !prev);

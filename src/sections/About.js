@@ -1,12 +1,10 @@
-import { motion, useViewportScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import FaceSVG from '../components/FaceSVG';
 
 const About = () => {
 
-  const { scrollY } = useViewportScroll();
-
-  const [ref, inView, entry] = useInView({
+  const [ref, inView] = useInView({
     threshold: 0.5,
     triggerOnce: false
   });
