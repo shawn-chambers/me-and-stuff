@@ -1,6 +1,7 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import BillBoardSquiggle from "../components/BillboardSquiggle"
+import useRefScrollProgress from "../hooks/useRefScrollProgress";
 
 const Billboard = () => {
   const { scrollYProgress } = useViewportScroll();
@@ -10,12 +11,17 @@ const Billboard = () => {
     setHover(prev => !prev);
   }
 
-  const moveLeft = useTransform(scrollYProgress, [0, .8], [0, -1500]);
-  const moveRight = useTransform(scrollYProgress, [0, .8], [0, 1500]);
-  const hide = useTransform(scrollYProgress, [0, .55], [1, 0]);
+  const sectionRef = useRef(null);
+  const { start, end } = useRefScrollProgress(sectionRef);
+
+  const moveLeft = useTransform(scrollYProgress, [start, end], [0, -1500]);
+  const moveRight = useTransform(scrollYProgress, [start, end], [0, 1500]);
+  const hide = useTransform(scrollYProgress, [start, end/2], [1, 0]);
 
   return (
-    <section className="billboard">
+    <section className="billboard"
+      ref={sectionRef}
+    >
       <div className="billboard-header-main hollow">
         <motion.h1
           className="first"

@@ -1,5 +1,72 @@
 .abilities {
   height: 100vh;
   background-color: $color-text-dark;
+  overflow: hidden;
   color: $color-background;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 50vw;
+
+  &-list {
+    font-family: "Montserrat", sans-serif;
+    font-size: 90px;
+    margin-left: 60px;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-skill {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 160px;
+    -webkit-text-stroke-color: rgb(22, 42, 71) !important;
+    width: 1000px;
+  }
+
+  &-billboard {
+    height: 100%;
+    width: 100vw;
+    // overflow: hidden;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-title {
+      font-size: 150px;
+      line-height: 1;
+      & > span {
+        color: $color-background !important;
+        &::before,
+        &::after {
+          background: $color-text-dark !important;
+          left: 6px !important;
+        }
+      }
+    }
+    &-sub {
+      font-size: 50px;
+      max-width: 80vw;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  z-index: -2;
+  gap: 60vw;
+  margin-top: 40px;
+}
+
+.another {
+  &::before,
+  &::after {
+    animation-delay: .5s !important;
+  }
+}
+
+.ghost {
+  width: 100vw;
+  height: 100vh;
 }

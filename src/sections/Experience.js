@@ -1,9 +1,7 @@
-
-
 const Experience = () => {
   return (
     <section className="experience">
-      <div>Experience</div>
+      <div className="glitch" data-text="Experience">Experience</div>
     </section>
   )
 }

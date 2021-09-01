@@ -8,7 +8,7 @@ function App() {
     <>
       <Billboard />
       <About />
-      <Experience />
+      {/* <Experience /> */}
       <Abilities />
     </>
   );
