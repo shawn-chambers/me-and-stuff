@@ -10,10 +10,10 @@ const Abilities = () => {
   const { width, height } = useWindowDimensions();
 
   const { end, end2 } = width < 1400 ? { end: -18000, end2: -16500 } : { end: -19500, end2: -17750 }
-  const move = useTransform(scrollYProgress, [0.09, 1], [0, end]);
-  const move2 = useTransform(scrollYProgress, [0.089, 1], [2600, end2]);
-  const hide = useTransform(scrollYProgress, [0.085, 0.085, .995, 1], [0, 1, 1, 0]);
-  const transition = useTransform(scrollYProgress, [0.08, 0.15], [1, 0]);
+  const move = useTransform(scrollYProgress, [0.06, 1], [0, end]);
+  const move2 = useTransform(scrollYProgress, [0.059, 1], [2600, end2]);
+  const hide = useTransform(scrollYProgress, [0.1, 0.15, .95, 1], [0, 1, 1, 0]);
+  const transition = useTransform(scrollYProgress, [0.08, 0.1], [1, 0]);
 
   return (
     <>

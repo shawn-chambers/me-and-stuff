@@ -60,7 +60,7 @@
     justify-content: center;
     align-items: center; }
   .abilities-skill {
-    font-size: 160px;
+    font-size: 180px;
     -webkit-text-stroke-color: #162a47 !important;
     width: 100vw; }
   .abilities-billboard {
@@ -88,7 +88,7 @@
   display: flex;
   z-index: -2;
   gap: 1000px;
-  margin-top: 40px; }
+  margin-top: 60px; }
 
 .another::before, .another::after {
   animation-delay: .5s !important; }
