@@ -50,20 +50,19 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 50vw; }
+  gap: 1000px; }
   .abilities-list {
     font-family: "Montserrat", sans-serif;
     font-size: 90px;
-    margin-left: 60px;
+    width: 90vw;
     height: 90%;
     display: flex;
     justify-content: center;
     align-items: center; }
   .abilities-skill {
-    font-family: "Gothic A1", sans-serif;
     font-size: 160px;
     -webkit-text-stroke-color: #162a47 !important;
-    width: 1000px; }
+    width: 100vw; }
   .abilities-billboard {
     height: 100%;
     width: 100vw;
@@ -72,6 +71,8 @@
     flex-direction: column;
     justify-content: space-between; }
     .abilities-billboard-title {
+      font-family: "Gothic A1", sans-serif;
+      font-weight: bold;
       font-size: 150px;
       line-height: 1; }
       .abilities-billboard-title > span {
@@ -86,7 +87,7 @@
 .list {
   display: flex;
   z-index: -2;
-  gap: 60vw;
+  gap: 1000px;
   margin-top: 40px; }
 
 .another::before, .another::after {

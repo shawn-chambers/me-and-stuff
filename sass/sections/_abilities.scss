@@ -6,12 +6,13 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 50vw;
+  gap: 1000px;
 
   &-list {
     font-family: "Montserrat", sans-serif;
     font-size: 90px;
-    margin-left: 60px;
+    // margin-left: 60px;
+    width: 90vw;
     height: 90%;
     display: flex;
     justify-content: center;
@@ -19,12 +20,11 @@
   }
 
   &-skill {
-    font-family: "Gothic A1", sans-serif;
     font-size: 160px;
     -webkit-text-stroke-color: rgb(22, 42, 71) !important;
-    width: 1000px;
+    width: 100vw;
   }
-
+  
   &-billboard {
     height: 100%;
     width: 100vw;
@@ -34,6 +34,8 @@
     flex-direction: column;
     justify-content: space-between;
     &-title {
+      font-family: "Gothic A1", sans-serif;
+      font-weight: bold;
       font-size: 150px;
       line-height: 1;
       & > span {
@@ -55,7 +57,7 @@
 .list {
   display: flex;
   z-index: -2;
-  gap: 60vw;
+  gap: 1000px;
   margin-top: 40px;
 }
 

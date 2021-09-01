@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 function useRefScrollProgress(inputRef) {
   const ref = inputRef;
@@ -13,7 +13,7 @@ function useRefScrollProgress(inputRef) {
     const offsetTop = rect.top + scrollTop;
     setStart(offsetTop / document.body.clientHeight);
     setEnd((offsetTop + rect.height) / document.body.clientHeight);
-  });
+  }, [ref]);
   return { ref, start, end };
 }
 

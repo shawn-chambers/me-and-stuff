@@ -1,27 +1,19 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { useRef } from "react";
 import { Controller, Scene } from "react-scrollmagic";
-import useRefScrollProgress from "../hooks/useRefScrollProgress";
-import useWindowDimensions from '../hooks/getWindowDimensions';
+import useWindowDimensions from "../hooks/getWindowDimensions";
 
 
 const Abilities = () => {
 
   const { scrollYProgress } = useViewportScroll();
 
-  const ghostRef = useRef(null);
-  const { start, end } = useRefScrollProgress(ghostRef);
+  const { width, height } = useWindowDimensions();
 
-  const { width } = useWindowDimensions();
-
-
-  // const move = useTransform(scrollYProgress, [start, 1], [0, -10400]);
-  // const move2 = useTransform(scrollYProgress, [start, 1], [-11100, -28400]);
-  const move = useTransform(scrollYProgress, [0.09, 1], [0, -11200]);
-  // const move2 = useTransform(scrollYProgress, [0.08, 1], [-11100, -28400]);
-  const move2 = useTransform(scrollYProgress, [0.09, 1], [-14000, -26000]);
+  const { end, end2 } = width < 1400 ? { end: -18000, end2: -16500 } : { end: -19500, end2: -17750 }
+  const move = useTransform(scrollYProgress, [0.09, 1], [0, end]);
+  const move2 = useTransform(scrollYProgress, [0.089, 1], [2600, end2]);
   const hide = useTransform(scrollYProgress, [0.085, 0.085, .995, 1], [0, 1, 1, 0]);
-  const transition = useTransform(scrollYProgress, [0.08, 0.1], [1, 0]);
+  const transition = useTransform(scrollYProgress, [0.08, 0.15], [1, 0]);
 
   return (
     <>
@@ -29,17 +21,17 @@ const Abilities = () => {
         <Scene
           triggerElement=".abilities"
           triggerHook={'onLeave'}
-          duration={19000}
+          duration={30000}
           pin={true}
         >
           <motion.section
             className="abilities"
           >
-            {console.log(width)}
             <motion.div
               className="abilities-billboard"
               style={{ opacity: transition }}
             >
+              {console.log(width, height)}
               <motion.div
                 className="abilities-billboard-title"
               >
@@ -101,35 +93,46 @@ const Abilities = () => {
               Adobe Creative Suites (Illustrator, Photoshop), Figma, Sketch, GIMP
             </motion.div>
             <motion.div
-              style={{ x: move2, opacity: hide }}
+              style={{
+                x: move2,
+                opacity: hide,
+                position: "absolute"
+              }}
               className="list"
             >
-              <motion.div className="hollow abilities-skill">
+              <motion.div className="hollow abilities-skill"
+              >
                 CLIENT SIDE
               </motion.div>
-              <motion.div className="hollow abilities-skill">
+              <motion.div className="hollow abilities-skill"
+              >
                 SERVER SIDE
               </motion.div>
-              <motion.div className="hollow abilities-skill">
+              <motion.div className="hollow abilities-skill"
+              >
                 DATABASES/ ORMs
               </motion.div>
-              <motion.div className="hollow abilities-skill">
+              <motion.div className="hollow abilities-skill"
+              >
                 TESTING
               </motion.div>
-              <motion.div className="hollow abilities-skill">
+              <motion.div className="hollow abilities-skill"
+              >
                 DEPLOYMENT
               </motion.div>
-              <motion.div className="hollow abilities-skill">
+              <motion.div className="hollow abilities-skill"
+              >
                 DEVELOPMENT TOOLS
               </motion.div>
-              <motion.div className="hollow abilities-skill">
+              <motion.div className="hollow abilities-skill"
+              >
                 ANIMATION/ VISUALIZATION
               </motion.div>
-              <motion.div className="hollow abilities-skill">
+              <motion.div className="hollow abilities-skill"
+              >
                 DESIGN/ PROTOTYPING
               </motion.div>
             </motion.div>
-            <div className="ghost" ref={ghostRef}></div>
           </motion.section>
         </Scene>
       </Controller>
